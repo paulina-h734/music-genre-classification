@@ -55,7 +55,7 @@ Writing this up afterward, three things stand out:
   likely explains why accuracy sits below the ~70–80% that classic-feature GTZAN
   baselines reach. Dropping the averaged spectrogram and keeping the engineered
   features is the first experiment I'd run.
-- **SMOTE wasn't needed.** GTZAN is balanced by construction — 100 tracks per genre, and
+- **SMOTE wasn't needed.** GTZAN is balanced by construction: 100 tracks per genre, and
   my run skipped exactly one file. Oversampling a 100/…/99 split is effectively a no-op,
   so the accuracy gain from RandomForest to XGBoost can't be attributed to better
   handling of class imbalance.
@@ -67,6 +67,6 @@ the better-suited approach for this data and would be the natural follow-up.
 
 ## Files
 
-- `notebook.ipynb` — full pipeline, from audio loading to evaluation
-- `report.pdf` — the written report, covering the Fourier basis, STFT/DFT, and the derivation of each feature
-- `figures/` — generated plots
+- `notebook.ipynb`: full pipeline, from audio loading to evaluation
+- `report.pdf`: the written report, covering the Fourier basis, STFT/DFT, and the derivation of each feature
+- `figures/`: generated plots
